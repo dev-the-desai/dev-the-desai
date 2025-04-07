@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Formatting Code - Your Name</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rokkitt:ital,wght@0,400;0,700;1,400&family=Spline+Sans+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Optional: Add a syntax highlighting library like Prism.js for code blocks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <img src="../img/avatar.jpg" alt="Profile Picture" class="avatar">
+                <h1 class="site-title">Your Name</h1>
+                <p class="site-description">I write about compilers, performance, and silly computer things.</p>
+                
+                <nav class="main-nav">
+                    <a href="../index.html">🏠 Home</a>
+                    <a href="../about.html">👤 About</a>
+                    <a href="../blog.html">✍️ Posts</a>
+                    <a href="https://github.com/yourusername">GitHub</a>
+                </nav>
+            </div>
+            
+            <footer class="sidebar-footer">
+                <p>© 2025 Your Name</p>
+            </footer>
+        </aside>
+        
+        <main class="content">
+            <article class="post">
+                <h1>The Art of Formatting Code</h1>
+                
+                <div class="post-meta">
+                    2025-03-11 • 3738 words • 31 minutes • #formats #parsing #frontend
+                </div>
+                
+                <p>Every modern programming language needs a formatter to make your code look pretty and consistent. Formatters are source-transformation tools that parse source code and re-print the resulting AST in some canonical form that normalizes whitespace and optional syntactic constructs. They remove the tedium of matching indentation and brace placement to match a style guide.</p>
+                
+                <p>Go is particularly well-known for providing a formatter as part of its toolchain from day one. It is not a good formatter, though, because it cannot enforce a maximum column width. Later formatters of the 2010s, such as rustfmt and clang-format, do provide this feature, which ensure that individual lines of code don't get too long.</p>
+                
+                <h2>Code Example</h2>
+                
+                <pre><code class="language-javascript">// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}</code></pre>
+                
+                <h2>Blockquote Example</h2>
+                
+                <blockquote>
+                    <p>This is a blockquote following a header.</p>
+                    <p>When something is important enough, you do it even if the odds are not in your favor.</p>
+                </blockquote>
+            </article>
+        </main>
+    </div>
+    
+    <!-- Optional: Add syntax highlighting library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+</body>
+</html>
