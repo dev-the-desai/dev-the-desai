@@ -133,7 +133,6 @@ a:hover, a:focus {
     text-decoration-color: var(--link-hover-color);
 }
 
-/* Site title styling to match mcyoung */
 .site-title {
     font-family: var(--font-body);
     font-size: 5rem;
@@ -175,7 +174,6 @@ a:hover, a:focus {
     line-height: 1.5;
 }
 
-/* Navigation styling to match mcyoung */
 .main-nav {
     text-align: left;
     margin: 1.5rem 0;
