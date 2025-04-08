@@ -92,6 +92,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 h2 {
@@ -141,9 +143,9 @@ a:hover, a:focus {
     transform: none;
     text-decoration: none;
     font-style: normal;
-    color: #ccc;
+    color: var(--heading-color);
     margin-bottom: 2rem;
-    line-height: 0.9;
+    line-height: 1.1;
     font-weight: bold;
     letter-spacing: -0.03em;
     padding-bottom: 1rem;
@@ -155,7 +157,7 @@ a:hover, a:focus {
     height: 8px;
     background-color: var(--accent-color);
     left: 0;
-    width: 30%;
+    width: 40%;
 }
 
 .site-title::before {
@@ -175,7 +177,7 @@ a:hover, a:focus {
 }
 
 .main-nav {
-    text-align: left;
+    text-align: center;
     margin: 1.5rem 0;
 }
 
@@ -272,8 +274,10 @@ blockquote p:last-child {
     font-family: var(--font-mono);
     font-size: 75%;
     color: #999;
-    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     font-style: italic;
+    clear: both;
 }
 
 .post-preview {
