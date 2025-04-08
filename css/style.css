@@ -40,11 +40,12 @@ body {
     letter-spacing: 0.01em;
 }
 
-/* Layout */
+/* Layout with flex */
 .container {
     display: flex;
     min-height: 100vh;
     border: none;
+    position: relative;
 }
 
 /* Sidebar */
@@ -59,18 +60,62 @@ body {
     bottom: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
     z-index: 10;
     text-align: left;
+    overflow-y: auto;
+}
+
+/* Upper section for avatar/logo */
+.sidebar-top {
+    flex: 0 0 35%; /* This makes it take up available space before the content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+/* Content section positioned higher */
+.sidebar-content {
+    flex: 1; /* Takes remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0;
 }
 
 .content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 3rem;
     margin-left: 360px;
     background-color: var(--content-bg);
     min-height: 100vh;
+}
+
+/* Avatar styling */
+.avatar {
+    width: 100%;
+    max-width: 310px;
+    height: auto;
+    border-radius: 8px;
+    /*margin: 0 auto 1rem auto;*/
+    display: block;
+    object-fit: contain;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0;
+}
+
+/* Footer section */
+.sidebar-footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    color: #777;
+    border-top: none;
 }
 
 /* Typography */
@@ -144,11 +189,14 @@ a:hover, a:focus {
     text-decoration: none;
     font-style: normal;
     color: var(--heading-color);
-    margin-bottom: 2rem;
-    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    line-height: 0.9;
     font-weight: bold;
     letter-spacing: -0.03em;
     padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .site-title::before, .site-title::after {
@@ -161,11 +209,11 @@ a:hover, a:focus {
 }
 
 .site-title::before {
-    top: 45%;
+    top: 40%;
 }
 
 .site-title::after {
-    bottom: 0;
+    bottom: 10%;
 }
 
 .site-description {
@@ -178,7 +226,7 @@ a:hover, a:focus {
 
 .main-nav {
     text-align: center;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 .main-nav a {
@@ -258,16 +306,7 @@ blockquote p:last-child {
 }
 
 /* Sidebar elements */
-.avatar {
-    width: 100%;
-    max-width: 310px;
-    height: auto;
-    border-radius: 8px;
-    margin: 0 auto 1rem auto;
-    display: block;
-    object-fit: cover;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
+
 
 /* Blog post elements */
 .post-meta {
@@ -332,14 +371,7 @@ hr {
 }
 
 /* Footer styling to match mcyoung */
-.sidebar-footer {
-    margin-top: auto;
-    text-align: center;
-    font-size: 0.8rem;
-    padding-top: 1rem;
-    color: #777;
-    border-top: none;
-}
+x
 
 /* Lists */
 ul, ol {
